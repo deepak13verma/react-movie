@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Search from './Components/Search';
 import MovieCard from './Components/MovieCard';
 import Trending from './Components/Trending';
-
+import FirstChild from './Components/FirstChild';
+import LoginContextProvider from './context/LoginContextProvider'
 
 const API_BASE_URL = 'http://www.omdbapi.com';
 const API_KEY = import.meta.env.VITE_IMDB_API_KEY;
@@ -72,7 +73,9 @@ const App = () => {
   return (
     <main>
       <div className="pattern" />
-
+      <LoginContextProvider>
+        <FirstChild /> 
+      </LoginContextProvider>
       <div className="wrapper">
         <header>
           <img src="./hero.png" alt="Hero Banner" />
