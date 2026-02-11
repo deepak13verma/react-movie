@@ -2,9 +2,7 @@ import React, {useContext} from 'react'
 import { LoginContext} from '../context/LoginContextProvider'
 
 const SearchChild = () => {
-
   const myValue = useContext(LoginContext);
-
   console.log(myValue);
   return (
     <div>
